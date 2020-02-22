@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>js course</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		//print anything
+		//starting another js course.
+		alert("This is my first js program");
+		document.write("<h2>Hello world!</h2>");
+		document.write("<b>About me :</b><br>");
+		document.write("<h5>i am Bayazid Hasan</h5>");
+		document.write("<h5>Follow me on sololearn...</h5>");
+		document.write("<h5>i have already completed so many course here!</h5>");
+		document.write("<h2>These are : </h2>");
+		document.write("<h3>html,css,js,sql, php,jquery,c,c++, java</h3><br>");
+		console.log("i love javascript");
+	</script>
+</body>
+</html>
