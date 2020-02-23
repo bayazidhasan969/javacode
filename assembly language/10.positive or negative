@@ -1,0 +1,54 @@
+;positive or negative number
+
+.model small
+.stack 100h
+.data
+   msg db 0dh,0ah,'negative$'
+   msg1 db 0dh,0ah,'positive$'   
+   msg2 db 0dh,0ah,'zero$'
+   msg3 db 'enter your number: $'
+.code
+ main proc
+    mov ax,@data
+    mov ds,ax
+    
+    input:
+    lea dx,msg3
+    mov ah,9
+    int 21h
+    
+    mov ah,1
+    int 21h
+    
+    mov bl,al
+    mov cl,30h
+    
+    cmp bl,cl
+    
+    jl negative
+    je zero
+    jg positive
+    
+    negative:
+    lea dx,msg
+    mov ah,9
+    int 21h
+    jmp end_case
+    
+    positive:
+    lea dx,msg1
+    mov ah,9
+    int 21h
+    jmp end_case
+    
+    zero:
+    lea dx,msg2
+    mov ah,9
+    int 21h
+    jmp end_case 
+    
+    end_case:
+    mov ah,4ch
+    int 21h
+    main endp
+    end main
