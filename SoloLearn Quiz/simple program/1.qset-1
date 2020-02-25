@@ -1,0 +1,10 @@
+Q1. output?
+
+int x;
+int y;
+double z;
+x=5;
+y=x*2; //y=5*2 so, y=10
+z=x/2+10; // z=5/2+10 =12.0
+System.out.println(z); //output:12.0
+	
