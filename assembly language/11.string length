@@ -1,0 +1,36 @@
+;string length
+
+.model small
+.stack 100h
+.data
+    a db 'uits cse$'
+.code
+ main proc
+    mov ax,@data
+    mov ds,ax
+    
+    lea si,a
+    xor cx,cx
+    
+    while_:
+    cmp [si],'$'
+    je output
+    
+    inc si
+    inc cx
+    jmp while_
+    
+    output:
+    mov ah,2
+    mov dx,cx
+    add dx,30h
+    int 21h
+    
+    
+    end_case:
+    mov ah,4ch
+    int 21h
+    main endp
+    end main
+
+
