@@ -23,7 +23,12 @@
     mov bl,al
     mov cl,30h
     
-    cmp bl,cl
+    mov dl,cl
+    
+    cmp bl,cl  
+    mov ah,1
+    mov dl,cl
+    int 21h
     
     jl negative
     je zero
@@ -52,3 +57,5 @@
     int 21h
     main endp
     end main
+
+
