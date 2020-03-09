@@ -1,0 +1,53 @@
+;string length
+
+.model small
+.stack 100h
+.data                                
+    str1 db 'uits   cse$'
+    str2 db 'uits cse$'  
+    msg db 'str1 and str2 s equal$' 
+    msg1 db 'str1 is less than str2$'
+    msg2 db 'str1 is greater than str2$'
+    
+.code
+ main proc
+    mov ax,@data
+    mov ds,ax
+    
+    mov es,ax
+    
+    mov cx,9
+    mov ah,9
+    
+    lea di,str1
+    lea si,str2
+    cld
+    
+    repe cmpsb
+    jg greater
+    jl less
+    je equal
+    
+    equal:
+    lea dx,msg
+    int 21h
+    jmp exit
+    
+    greater:
+    lea dx,msg2
+    int 21h
+    jmp exit
+    
+    less:
+    lea dx,msg1
+    int 21h
+    jmp exit
+    
+    
+    exit:
+    mov ah,4ch
+    int 21h
+    main endp
+    end main
+
+
