@@ -1,0 +1,34 @@
+*lab work-02
+*create a database using xamp on localhost:
+/*
+databas name:uitsb
+table:teachers
+id	name	address
+1	hasan	badda
+2	khan	mirpur
+3	raju	gulshan
+4	atik	gazipur
+5	joy	baridhara
+*/
+Steps:
+1.go to sql: 
+2.create a new database?
+sql: create database uitsb;
+3.click on database on left bar
+4.go to sql:
+5.for create a table on database?
+sql: create table teachers(id int,name varchar(20),address varchar(20));
+6.insert a data on teachers table?
+sql: insert into teachers(id,name,address)values(1,'hasan','badda');
+7.insert a data on teachers table again?
+sql: insert into teacher(id,name,address)values(2,'khan','mirpur');
+8.insert a data on teachers table again?
+sql: insert into teachers(id,name,address)values(3,'raju','gulshan');
+9.insert a data on teachers table again?
+sql: insert into teachers(id,name,address)values(4,'atik','gazipur');
+10.insert a data on teachers table again?
+sql: insert into teachers(id,name,address)values(5,'joy','baridhara');
+11.show teachers table?
+sql: select * from teachers;
+12.delete a data from teachers table?
+sql: delete from teachers where id=5;
