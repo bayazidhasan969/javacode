@@ -1,0 +1,49 @@
+lab work-05
+/*
+join table
+*/
+table1:student
+roll_no		name		address		age
+1		harsh		dlhi		18
+2		pratik		bihar		19
+3		riyanka		siliguri	20
+4		deep		ramnagar	18
+5		saptarhi	kolkata		19
+6		dhanraj		barabazer	20
+7		rohit		balughat	18
+8		niraj		alipur		19
+*/
+table2: studentcourse
+course_id	roll_no
+1		1
+2		2
+2		3
+3		4
+1		5
+4		9
+5		10
+4		11
+*/
+1.inner join:
+sql: SELECT Student.NAME, Student.AGE, StudentCourse.COURSE_ID FROM
+Student
+INNER JOIN StudentCourse
+ON Student.ROLL_NO = StudentCourse.ROLL_NO;
+
+2.left join:
+sql:SELECT Student.NAME, Student.AGE, StudentCourse.COURSE_ID FROM
+Student
+left JOIN StudentCourse
+ON Student.ROLL_NO = StudentCourse.ROLL_NO;
+
+3.right join:
+sql: SELECT Student.NAME, Student.AGE, StudentCourse.COURSE_ID FROM
+Student
+right JOIN StudentCourse
+ON Student.ROLL_NO = StudentCourse.ROLL_NO;
+
+4.full join:
+sql:SELECT Student.NAME, Student.AGE, StudentCourse.COURSE_ID FROM
+Student
+full JOIN StudentCourse
+ON Student.ROLL_NO = StudentCourse.ROLL_NO;
