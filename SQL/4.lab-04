@@ -1,0 +1,46 @@
+lab work-04
+/* 
+table:studnet	
+s_id	name	dept_name	address		tot_credit	born_year	weight	cgpa
+1	hasan	cse		mirpur		 3		1998-03-02	57	4.00
+2	hamid	eee		dhaka		3		1990-02-01	51	3.57
+3	harun	it		khulna		2		1991-03-05	54	3.85
+4	rafiq	ece		sherpur		1		1990-07-08	61	2.95
+5	rahman	english		rajshahi	3		1993-02-07	49	3.51
+*/
+
+1) Add a new column name “cgpa” to STUDENT table.?
+sql: alter table student add column CGPA float(5,2);
+
+2) Insert data into a new table name “student1” from the previous table containing
+those students’ records whose cgpa is higher than 3.50.?
+sql: create table student1 as(select * from student where CGPA>3.50);
+
+3) Select all the records of student1 table and show them in descending order by cgpa.?
+sql: select * from student order by CGPA DESC;
+
+4) Use your database containing table STUDENT. Display only those students’ information
+who have distinct names and whose weight between 50 and 60.?
+select * from student where weight between 50 and 60;
+
+/*
+table:instructor
+I_ID	name	dept_name	salary
+1	mim	physics		90000
+2	jim	math		95000
+3	sim	bba		80000
+4	lim	mba		10000
+*/
+
+5) Find the names of instructors with salary amounts between 90,000 and 1000,000.?
+sql: select name from instructor where salary between 90000 and 100000;
+
+6) List in alphabetic order all instructors’ names in the Physics department.?
+sql: select * from instructor where dept_name='physics' order by name asc;
+
+7) Retrieve the list of students, who are born on “1990”.?
+sql: select * from student where born_year=1990;
+
+8) Update the address of those students who live in Mirpur , Badda.?
+sql: update student set address='badda' where address='mirpur';
+
