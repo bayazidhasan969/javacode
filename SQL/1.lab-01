@@ -1,0 +1,36 @@
+*lab work-01
+*create a database using cmd:
+/*
+databas name:uits
+table:teacher
+id	name	address
+1	hasan	badda
+2	khan	mirpur
+3	raju	gulshan
+*/
+Steps:
+
+1.go to xampp folder on c drive?
+sql: cd c:\xampp\mysql\bin
+2.connect to my mysql server on localhost?
+sql: mysql -u root
+3.for any help?
+sql: \h
+4.for show all databases?
+sql: show databases;
+5.create a new database?
+sql: create database uits;
+6.for use that database?
+sql: use uits;
+7.for create a table on database?
+sql: create table teacher(id int,name varchar(20),address varchar(20));
+8.insert a data on teachers table?
+sql: insert into teacher(id,name,address)values(1,'hasan','badda');
+9.insert a data on teachers table again?
+sql: insert into teacher(id,name,address)values(2,'khan','mirpur');
+10.insert a data on teachers table again?
+sql: insert into teacher(id,name,address)values(3,'raju','gulshan');
+11.show teacher table?
+sql: select * from teacher;
+12.delete a data from teacher table?
+sql: delete from teacher where id=3;
