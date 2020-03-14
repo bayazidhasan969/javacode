@@ -1,0 +1,67 @@
+*lab work-03
+*create a database using xamp on localhost:
+/*
+databas name:UITS		
+table:teachers
+teachersID	name	address	salary
+1		hasan	badda	10000
+2		khan	mirpur	20000
+3		raju	gulshan	30000
+4		atik	gazipur	40000
+5		joy	airport	50000
+*/
+Steps:
+1.create a new database?
+sql: create database UITS;
+3.click on database on left bar
+4.go to sql:
+5.for create a table on database?
+sql: create table teachers(teachersID int,name varchar(20),address varchar(20),salary int);
+6.insert a data on teachers table?
+sql: insert into teachers(id,name,address,salary)values(1,'hasan','badda',100000);
+7.insert a data on teachers table again?
+sql: insert into teacher(id,name,address,salary)values(2,'khan','mirpur',20000);
+8.insert a data on teachers table again?
+sql: insert into teachers(id,name,address,salary)values(3,'raju','gulshan',30000);
+9.insert a data on teachers table again?
+sql: insert into teachers(id,name,address,salary)values(4,'atik','gazipur',40000);
+10.insert a data on teachers table again?
+sql: insert into teachers(id,name,address,salary)values(5,'joy','baridhara',50000);
+11.
+/*
+table:student
+studentID	name	semester	courses
+1		yas	first		bangla
+2		vas	second		english
+3		kas	third		math
+4		das	four		physics
+5		mas	five		cse
+*/
+13.insert 5 row on student table:?
+sql: create table student(studentID int,name varchar(20),semester varchar(20),courses varchar(20));
+14.insert row:?
+sql: insert into student(studentID,name,semester,courses)values(1,'yas','first','bangla');
+15.insert row again?
+sql: insert into student(studentID,name,semester,courses)values(2,'vas','second','english');
+16.insert row again?
+sql: insert into student(studentID,name,semester,courses)values(3,'kas','third','math');
+17.insert row again?
+sql: insert into student(studentID,name,semester,courses)values(4,'yas','four','physics');
+18.insert row again?
+sql: insert into student(studentID,name,semester,courses)values(5,'mas','five','cse');
+19.update teachers?
+sql: update teachers set address='hazipur' where teacherID=4;
+20.Add a new column address in student table.?
+sql: alter table student add address varchar(20);
+21.Drop the new address column.?
+sql: alter table student drop column address;
+22.Show the inputs of the both tables.
+sql: select * from teachers;
+sql: select * from student;
+23.Show the inputs order by address in ascending order.?
+for assending order:
+sql: select * from teachers order by address;
+for decessing order:
+sql: select * from teachers order by address desc
+24.Delete a teachers information where ID =5.?
+sql: delete from teachers where teacherID=5;
